@@ -1,13 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 :root {
     --primary-light-color:#EFFFF3;
     --primary-color:#2CE088;
     --gray1-color:#7A7D85;
+    --gray3-color:#E1E3E9; /* Gray3 */
+    --dark-color:#212329;
+    --red-color:#E75453; /* Красный */
+
+    --bs-primary-rgb:#2CE088;    /* зеленый 1, text-primary */
+    --bs-primary-text:#00AF5A;   /* зеленый 2, text-primary-emphasis */
+    --bs-heading-color: #212329;      /* Темно-серый .text-dark */
+    --bs-secondary-rgb:#545761;  /* Серый Меню .text-secondary */
+    --bs-success-bg-subtle:#EFFFF3; /* Фон баннеров 1 .bg-success-subtle */
+    
 }
-h1, .h1 {
+body {
+	font-family: 'Montserrat', sans-serif;
+	color:var(--dark-color);
+	font-size: 1.11vw;
+    line-height: 1.8;
+}
+* {
+	font-size: 1rem;
+}
+.h1, h1 {
     font-size: 3rem;
-    line-height: 1.5;
+    line-height: 1.2;
     padding-bottom: 3rem;
     font-weight: 600;
+}
+.h2, h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 600;
+}
+.h3, h3 {
+    font-size: 1.375rem;
+    line-height: 1.4;
+    font-weight: 600;
+}
+.btn {
+    --bs-btn-padding-x:4rem;
+    --bs-btn-padding-y:1rem;
+}
+.btn-danger {
+    --bs-btn-bg:var(--red-color);
+    --bs-btn-border-color:var(--red-color);
+}
+.text-gray{
+    color:var(--gray1-color);
 }
 
 /* #services */
@@ -22,7 +63,7 @@ h1, .h1 {
 #services .item {
     background-color: var(--primary-light-color);
     border-radius: 0.75rem;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,6 +74,7 @@ h1, .h1 {
     font-weight: 600;
     color: black;
     text-decoration: none;
+    padding: 0.5rem 0;
 }
 #services .item .badge {
     color: var( --gray1-color);
@@ -57,4 +99,126 @@ h1, .h1 {
 #services .item .badges .badge:last-child::before {
     content: '\f0fa';
 
+}
+
+/* #about */
+#about .menu-wrapper {
+    background: url('../images/about_img.png') right top scroll no-repeat transparent;
+    background-size: contain;
+    position: relative;
+}
+#about .menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    list-style: none;
+}
+#about .menu a{
+    text-decoration: none;
+    color: var(--bs-secondary-rgb);
+    padding: 0.5rem 0;
+    display: inline-block;
+}
+#about blockquote .text {
+    color: #6C7AA6;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-style: italic;
+}
+#about blockquote .author {
+    text-align: left;
+    display: block;
+    float: right;
+}
+#about blockquote .author span {
+    display: block;
+    color: var(--gray1-color);
+}
+
+/* advantages */
+#advantages {
+    background: url('../images/advantages_img.png') right top scroll no-repeat transparent;
+    background-size: auto;
+    position: relative;
+}
+#advantages .item {
+    background-color: var(--bs-success-bg-subtle);
+    border-radius: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 3rem;
+    position: relative;
+}
+#advantages .item::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    left: 3rem;
+    top: 2.8rem;
+    box-shadow: 0px 8px 14px #ABEFCE;
+    border-radius: 12px;
+    background: linear-gradient(218.11deg, #53F8A7 9.75%, #00AF5A 98.45%);
+}
+#advantages .items div:first-child .item::before {
+    background: url('../images/advantages_01.png') center center scroll no-repeat, linear-gradient(218.11deg, #53F8A7 9.75%, #00AF5A 98.45%);
+}
+#advantages .items div:nth-child(2) .item::before {
+    background: url('../images/advantages_02.png') center center scroll no-repeat, linear-gradient(218.11deg, #53F8A7 9.75%, #00AF5A 98.45%);
+}
+#advantages .items div:nth-child(3) .item::before {
+    background: url('../images/advantages_03.png') center center scroll no-repeat, linear-gradient(218.11deg, #53F8A7 9.75%, #00AF5A 98.45%);
+}
+#advantages .items div:nth-child(4) .item::before {
+    background: url('../images/advantages_04.png') center center scroll no-repeat, linear-gradient(218.11deg, #53F8A7 9.75%, #00AF5A 98.45%);
+}
+#advantages .items div:nth-child(5) .item::before {
+    background: url('../images/advantages_05.png') center center scroll no-repeat, linear-gradient(218.11deg, #53F8A7 9.75%, #00AF5A 98.45%);
+}
+#advantages .items div:nth-child(6) .item::before {
+    background: url('../images/advantages_06.png') center center scroll no-repeat, linear-gradient(218.11deg, #53F8A7 9.75%, #00AF5A 98.45%);
+}
+#advantages .item p {
+    margin-left: 5rem;
+}
+#advantages .item p:not(.h3) {
+    color: var(--gray1-color);
+}
+
+/* hospitalisation */
+#hospitalisation {
+    background: url('../images/hospitalisation_bg.png') right top scroll no-repeat, linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 7%, rgba(239,255,243,1) 7%, rgba(239,255,243,1) 70%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%);
+    padding-top: 15rem;
+    background-size: auto;
+    position: relative;
+    height: 36rem;
+}
+
+/* #prices */
+#prices .item {
+    border-bottom: 1px solid var(--gray3-color);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+#prices .item>.h3 {
+    padding-top: 1rem;
+}
+#prices .item .more {
+    text-decoration: none;
+    color: var(--bs-secondary-rgb);
+    font-weight: 600;
+}
+#prices .item .btn,
+#prices .item .h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#prices .tiles .item {
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-bottom: none;
+    background-color: #53F8A7;
+    padding: 3rem;
 }
