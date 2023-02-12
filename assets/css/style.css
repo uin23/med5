@@ -2,7 +2,7 @@
 :root {
     --primary-light-color:#EFFFF3;
     --primary-color:#2CE088;
-    --gray1-color:#7A7D85;
+    --gray1-color:#7A7D85; /* Gray1 */
     --gray3-color:#E1E3E9; /* Gray3 */
     --dark-color:#212329;
     --red-color:#E75453; /* Красный */
@@ -219,6 +219,24 @@ body {
     margin-bottom: 1rem;
     margin-top: 1rem;
     border-bottom: none;
-    background-color: #53F8A7;
+    background-image: url('../images/prices_tiles_bg.png');
     padding: 3rem;
+    background-size: cover;
+    background-position: left top;
+    background-repeat: no-repeat;
+}
+#prices .tiles .item.marked {
+    background: rgb(182,187,244);
+    background-image: radial-gradient(circle at left top, rgba(182,187,244,1) 0%, rgba(255,255,255,0) 50%), url('../images/prices_tiles_bg.png') ;
+    background-size: cover;
+}
+#prices .tiles .item.marked .h3 {
+    color:#0070AF!important;
+}
+#prices .tiles .item .h3::before {
+    content: 'Тариф';
+    color:var(--gray1-color);
+    font-size: 1rem;
+    font-weight: 400;
+    display: block;
 }
