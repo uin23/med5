@@ -5,7 +5,7 @@
     }
 
     h1, .h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         line-height: 1.2;
         padding-bottom: 1rem;
         font-weight: 600;
@@ -21,9 +21,33 @@
         font-weight: 600;
     }
     .btn {
-        --bs-btn-padding-x: 2rem;
-        --bs-btn-padding-y: 1rem;
+        --bs-btn-padding-x: 1rem;
+        --bs-btn-padding-y: 0.75rem;
     }
+
+    .h3.text-primary-emphasis {
+        margin-top: 4rem;
+    }
+
+    .banner {
+        padding-top: 14rem;
+        background: url(../images/banner-bottom_bg.png) top right scroll no-repeat, linear-gradient(0deg, var(--bs-success-bg-subtle) 0%, var(--bs-success-bg-subtle) 92%, rgba(255,255,255,0) 92%, rgba(255,255,255,0) 100%);
+        background-size: 80%;
+        background-position-x: 135%;
+    }
+    .banner .form-control.phone {
+        margin: 0.5rem 0;
+    }
+    .banner .btn {
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+    .banner .form-check {
+        padding-left:0;
+        line-height: 1.5;
+    }
+
+    /* #about */
     #about .menu-wrapper {
         margin-bottom: 5rem;
     }
@@ -45,6 +69,12 @@
     }
 
     /* prices */
+    #prices .tiles .item {
+        padding: 1.5rem;
+    }
+    #prices .tiles .item .h3.text-primary-emphasis {
+        margin-top: 0;
+    }
     #prices .item .btn {
         width: 100%;
     }
@@ -52,6 +82,14 @@
         display: inline-block;
         width: 100%;
         text-align: center;
+    }
+    /* stages */
+    #stages .digits .h2 {
+        font-size: 1rem;
+        margin-top: 0.75rem;
+    }
+    #stages .btn {
+        width: 100%;
     }
     /* #advantages */
     #advantages {
@@ -73,13 +111,72 @@
         margin-left: 0;
         margin-top: 1rem;
     }
+
+    /* #differences */
+    #differences .pay, #differences .free {
+        padding: 2rem 1rem;
+        margin: 0.5rem 0;
+    }
+    #differences .h2 {
+        margin-bottom: 2rem;
+        margin-left: 0;
+        text-align: center;
+    }
+    #differences dl.marked {
+        padding-left:1.75rem;
+    }
+    #differences dl.marked dt {
+        font-size: 1.125rem;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+    }
+
+    /* #faq */
+    #faq .accordion-button {
+        --bs-accordion-btn-padding-y: 2rem;
+        --bs-accordion-btn-padding-x: 1rem;
+        --bs-accordion-inner-border-radius: 0.5rem;
+        flex-wrap: wrap;
+        font-size: 1.125rem;
+        font-weight: 600;
+    }
+    #faq .accordion-button::after {
+        transform: rotate(-90deg);
+        margin: 0 auto;
+        padding-top: 2rem;
+        background-position: center bottom;
+    }
+
+    #procedures .hospitalisation-conditions {
+        padding: 1.5rem 1rem;
+    }
+    #procedures .hospitalisation-conditions .btn {
+        width: 100%;
+    }
+
+
     footer .title {
         margin-bottom: 1.5rem;
+    }
+    footer .footer-middle {
+        margin-top: 3rem;
     }
     footer .footer-middle ul  {
         max-height: initial;
     }
     footer .footer-middle ul li {
+        width: 100%;
+    }
+    footer .logo {
+        display: block;
+        margin-right: 20%;
+    }
+    footer ul.phones li a {
+        color: var(--bs-heading-color);
+    }
+
+    footer .btn-call {
+        --bs-btn-border-color: var(--gray3-color);
         width: 100%;
     }
 

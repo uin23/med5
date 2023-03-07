@@ -13,6 +13,7 @@
     --bs-heading-color: #212329;      /* Темно-серый .text-dark */
     --bs-secondary-rgb:#545761;  /* Серый Меню .text-secondary */
     --bs-success-bg-subtle:#EFFFF3; /* Фон баннеров 1 .bg-success-subtle */
+    --bs-success-bg-subtle2:#F8FFF9; /* Фон баннеров 2 */
   
 }
 body {
@@ -320,7 +321,7 @@ ul.marked li::before {
     border-radius: 1rem;
 }
 #differences .pay {
-    background-color: var(--bs-success-bg-subtle);
+    background-color: var(--bs-success-bg-subtle2);
 }
 #differences .free {
     border: 1px solid var(--gray2-color);
@@ -330,20 +331,27 @@ ul.marked li::before {
 #faq .accordion-item {
     border: none;
     border-radius: 0;
+    margin: 2rem 0;
 }
 #faq .accordion-button {
     --bs-accordion-btn-padding-y: 2rem;
     --bs-accordion-btn-padding-x:4rem;
     --bs-accordion-inner-border-radius: 1rem;
+    --bs-accordion-btn-bg: var(--bs-success-bg-subtle2);
 }
 #faq .accordion-button:not(.collapsed) {
-    border-bottom-left-radius: var(--bs-accordion-inner-border-radius);
-    border-bottom-right-radius: var(--bs-accordion-inner-border-radius);  
-    --bs-accordion-active-color: #FFFFFF;
+    /*border-bottom-left-radius: var(--bs-accordion-inner-border-radius);
+    border-bottom-right-radius: var(--bs-accordion-inner-border-radius); */ 
+    border-radius: var(--bs-accordion-inner-border-radius);
+    --bs-accordion-btn-bg:#32C17D;
+    --bs-accordion-btn-color: #FFFFFF;
     --bs-accordion-active-bg:#32C17D;
+    --bs-accordion-active-color: #FFFFFF;
 }
 #faq .accordion-button::after {
     transform: rotate(-90deg);
+    padding-left: 3rem;
+    background-position: right center;
 }
 #faq .accordion-button:not(.collapsed)::after {
     transform: rotate(0deg);
