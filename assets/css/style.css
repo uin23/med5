@@ -263,6 +263,9 @@ ul.marked li::before {
     font-weight: 400;
     display: block;
 }
+#prices .icon-rouble:before {
+    font-size: 1.8rem;
+}
 /* #stages */
 #stages .digits img {
     margin-top: 3rem;
@@ -455,4 +458,18 @@ footer .footer-bottom {
     padding: 2rem 3rem;
     color: #fff;
 }
-
+footer .social {
+    display: flex;
+}
+footer .social li i::before {
+    font-size: 1.5rem;
+}
+footer .btn-call {
+    --bs-btn-padding-x:1rem;
+    width: 100%;
+}
+.btn-call .icon-whatsapp:before {
+    color: var(--bs-primary-text);
+    font-size: 1.5rem;
+    vertical-align: bottom;
+}

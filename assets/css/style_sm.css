@@ -83,6 +83,9 @@
         width: 100%;
         text-align: center;
     }
+    #prices .icon-rouble:before {
+        font-size: 1.5rem;
+    }
     /* stages */
     #stages .digits .h2 {
         font-size: 1rem;
